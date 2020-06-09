@@ -1,29 +1,16 @@
 from random import randint
 
-i = int(input('enter how many times coin to be tossed'))
-count1 = 0
-count2 = 0
+heads_count = 0
+tails_count = 0
 
-for res in range(i):
-	res = randint(0,1)
+for i in range(100):
 
-	if res == 1:
+    i = randint(0,1)
 
-		count1 = count1 +1
-	else:
-	
-		count2 = count2 +1
-print('No of heads')
-print(count1)
+    if(i == 0):
+        tails_count+=1
+    elif( i == 1):
+        heads_count+=1
 
-print('No of tails')
-print(count2)
-
-count1 = (count1/i)*100
-count2 = (count2/i)*100
-
-print('probablity of getting head')
-print(count1)
-
-print('probablity of getting tails')
-print(count2)
+print('no of heads',heads_count,', probablity of getting Heads',heads_count/100)
+print('no of tails',tails_count,', probablity of getting Tails',tails_count/100)
